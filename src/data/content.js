@@ -229,35 +229,52 @@ export const portfolio = {
       featured: true,
 
       description:
-        "A full-stack social media application where users can publish tweets, explore content, search for users and posts, and access subscription plans with usage limits.",
+        "A full-stack social media platform featuring tweet publishing, user discovery, social interactions, multilingual support, and subscription-based usage limits.",
 
       longDescription:
-        "Built using React, TypeScript, Node.js, Express.js, and MongoDB Atlas. The application brings together social interactions, authentication, multilingual interfaces, subscription management, and external service integrations.",
+        "Developed a full-stack social media application using React, TypeScript, Next.js, Node.js, Express.js, and MongoDB Atlas. Integrated authentication, social interactions, OTP verification, payment processing, media uploads, and multilingual interfaces.",
 
       image: "/projects/twitter-clone.png",
 
       technologies: [
         "React.js",
         "TypeScript",
+        "Next.js",
         "Node.js",
         "Express.js",
         "MongoDB Atlas",
+        "Mongoose",
         "Firebase",
+        "Brevo",
+        "Twilio",
+        "Cloudinary",
         "Razorpay",
+        "i18next",
+      ],
+
+      points: [
+        "Developed a full-stack social media platform supporting tweet creation, likes, retweets, comments, user profiles, following, and content discovery.",
+        "Implemented user authentication, Google sign-in, password recovery, and email/SMS OTP verification using Firebase and third-party messaging services.",
+        "Integrated Razorpay subscription payments with four membership tiers and backend-enforced daily tweet limits.",
+        "Built multilingual interfaces supporting English, Spanish, French, Hindi, Portuguese, and Chinese, alongside theme switching and browser notifications.",
+        "Developed RESTful APIs with Node.js and Express.js, managed application data using MongoDB Atlas, integrated Cloudinary for media storage, and deployed the frontend on Vercel and backend on Render.",
       ],
 
       features: [
         "User authentication",
         "Google sign-in integration",
-        "Create and explore tweets",
+        "Create, like, retweet, and comment on tweets",
+        "User profiles and following",
         "Search tweets and users",
-        "Multilingual interface",
-        "Subscription plans",
-        "Tweet usage limits",
-        "Payment integration",
-        "Email and SMS OTP integrations",
+        "Six-language interface",
+        "Subscription plans and daily tweet limits",
+        "Razorpay payment integration",
+        "Email and SMS OTP verification",
+        "Password recovery",
         "Image and audio upload functionality",
-        "Notification functionality",
+        "Browser notifications",
+        "Light and dark themes",
+        "Responsive user interface",
       ],
 
       subscriptionPlans: [
@@ -292,28 +309,20 @@ export const portfolio = {
         "Chinese",
       ],
 
-      architecture: {
-        frontend: "React.js / Next.js",
-        backend: "Node.js / Express.js",
-        database: "MongoDB Atlas",
-        authentication: "Firebase",
-        payments: "Razorpay",
-        mediaStorage: "Cloudinary",
-      },
-
       challenges: [
-        "Integrating authentication and OTP providers.",
-        "Managing environment variables across local and deployed environments.",
-        "Implementing subscription-based tweet limits.",
-        "Connecting frontend features to backend APIs and database models.",
+        "Integrating authentication providers and email/SMS OTP workflows.",
+        "Managing environment variables and service configurations across local and deployed environments.",
+        "Implementing subscription-based tweet limits and payment workflows.",
+        "Connecting frontend interactions to REST APIs, database models, and third-party services.",
+        "Debugging deployment issues and handling API errors across multiple integrations.",
       ],
 
       learnings: [
-        "Designing and integrating REST APIs.",
-        "Working with MongoDB and Mongoose.",
-        "Integrating third-party authentication and payment services.",
-        "Debugging deployment and configuration issues.",
-        "Managing feature rules in the backend.",
+        "Designing and integrating RESTful APIs.",
+        "Working with MongoDB Atlas, Mongoose, and data validation.",
+        "Integrating third-party authentication, payment, email, SMS, and media services.",
+        "Implementing subscription rules and server-side feature restrictions.",
+        "Managing environment variables, debugging production issues, and deploying full-stack applications.",
       ],
 
       liveUrl: "https://twitter-clone-dusky-alpha.vercel.app/",
@@ -327,33 +336,63 @@ export const portfolio = {
       featured: true,
 
       description:
-        "A recipe-focused application designed to help users discover and interact with recipe content.",
+        "A recipe-focused web application designed to help users explore recipe content through a modern, interactive interface.",
 
       longDescription:
-        "A web application built with Next.js, Clerk authentication, and Strapi CMS. Update this description with the exact AI features and workflows supported by your current deployed version.",
+        "Built a recipe-focused web application using Next.js and React, with Clerk authentication and Strapi CMS integration. The project combines a modern frontend, user authentication, and content management to deliver a structured recipe discovery experience.",
 
       image: "/projects/servd-ai.png",
 
       technologies: [
         "Next.js",
+        "React.js",
+        "JavaScript",
+        "Tailwind CSS",
         "Clerk",
         "Strapi CMS",
       ],
 
+      points: [
+        "Developed a responsive recipe-focused web application using Next.js, React.js, and Tailwind CSS.",
+        "Integrated Clerk authentication to support secure user sign-in and session management.",
+        "Connected Strapi CMS to manage recipe content and retrieve structured data for the application.",
+        "Designed an interactive user interface for browsing and exploring recipe-related content across screen sizes.",
+        "Organized the application using reusable React components and Next.js routing to support maintainable development and navigation.",
+      ],
+
       features: [
-        "Next.js application",
+        "Recipe-focused content discovery",
         "Clerk authentication integration",
-        "Strapi content management integration",
-        "Recipe-focused user experience",
+        "Strapi CMS integration",
+        "Dynamic content management",
+        "Responsive user interface",
+        "Reusable React components",
+        "Next.js routing",
       ],
 
       architecture: {
-        frontend: "Next.js",
+        frontend: "Next.js, React.js, Tailwind CSS",
         authentication: "Clerk",
         contentManagement: "Strapi CMS",
+        language: "JavaScript",
       },
 
-      liveUrl: "YOUR_SERVD_LIVE_URL",
+      challenges: [
+        "Integrating Clerk authentication into the frontend.",
+        "Connecting the application to Strapi CMS for content management.",
+        "Structuring reusable components and maintaining consistent UI behavior.",
+        "Building a responsive interface and organizing application navigation.",
+      ],
+
+      learnings: [
+        "Building React applications with Next.js.",
+        "Implementing third-party authentication with Clerk.",
+        "Integrating a headless CMS for content management.",
+        "Creating reusable components and responsive layouts.",
+        "Structuring maintainable frontend applications.",
+      ],
+
+      liveUrl: "https://ai-recipe-maker-servdfrontend.vercel.app/",
       githubUrl: "YOUR_SERVD_REPOSITORY_URL",
     },
   ],
@@ -418,6 +457,14 @@ export const portfolio = {
       "clear",
     ],
 
+    projectslists:[
+      "> projects",
+      "1. Twitter Clone",
+      "2. SERVD AI",
+      "3. Chat-Sphere",
+      "> "
+    ],
+
     stackExplorer: [
       {
         label: "Interface",
@@ -440,34 +487,8 @@ export const portfolio = {
 
   // GITHUB SECTION
   github: {
-    username: "Code-sHere",
+    username: "Live from Code-sHere",
     profileUrl: "https://github.com/Code-sHere",
-    apiUrl: "https://api.github.com",
-
-    title: "Live from Code-sHere.",
-    description:
-      "Explore my public repositories, programming languages, and development activity.",
-
-    repositoryLimit: 6,
-
-    filters: [
-      "All",
-      "JavaScript",
-      "TypeScript",
-    ],
-
-    contributionCalendar: {
-      enabled: true,
-      fallbackMessage:
-        "Contribution data is unavailable right now. Visit my GitHub profile to explore my activity.",
-    },
-
-    repositoryFallback: {
-      empty:
-        "No public repositories match this filter yet.",
-      error:
-        "GitHub data could not be loaded right now. Please visit my profile directly.",
-    },
   },
 
   // CONTACT SECTION
@@ -486,44 +507,6 @@ export const portfolio = {
       "Full-time roles",
       "Collaboration",
     ],
-
-    form: {
-      fields: [
-        {
-          name: "name",
-          label: "Name",
-          type: "text",
-          required: true,
-        },
-        {
-          name: "email",
-          label: "Email",
-          type: "email",
-          required: true,
-        },
-        {
-          name: "subject",
-          label: "Subject",
-          type: "text",
-          required: true,
-        },
-        {
-          name: "message",
-          label: "Message",
-          type: "textarea",
-          required: true,
-        },
-      ],
-
-      submitLabel: "Send Message",
-
-      statusMessages: {
-        sending: "Sending your message...",
-        success: "Your message has been sent successfully.",
-        error:
-          "Your message could not be sent. Please try again.",
-      },
-    },
   },
 
   // FOOTER
