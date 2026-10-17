@@ -85,7 +85,7 @@ export const portfolio = {
     heading: "A developer who learns by building.",
 
     description:
-      "[I'm Vansh Jaat, a fresher Full Stack MERN Developer who enjoys turning ideas into real, functional web applications. I work across the frontend and backend, building responsive user interfaces, developing REST APIs, managing databases, and integrating authentication and third-party services.",
+      "[I'm Vansh Jaat, a fresher Full Stack also known as a MERN Developer who enjoys turning ideas into real, functional web applications. I work across the frontend and backend, building responsive user interfaces, developing REST APIs, managing databases, and integrating authentication and third-party services.",
 
     secondParagraph:
       "I've put my skills into practice through projects like my Twitter Clone and SERVD AI. From implementing authentication, subscription plans, payment integration, and multilingual interfaces to building an AI-powered recipe platform, I enjoy exploring how different technologies come together to solve real problems.]",
@@ -412,7 +412,13 @@ export const portfolio = {
         "Worked on a recipe-focused web application using Next.js, Clerk, and Strapi.",
     },
     {
-      status: "Last semester of BCA",
+      status: "Completed",
+      title: "Master Diploma in Computer Engineering",
+      description:
+        "Studying at IICS, Yamuna Vihar, Delhi.",
+    },
+    {
+      status: "1 exam left",
       title: "Bachelor of Computer Applications",
       description:
         "Studying at IGNOU.",
