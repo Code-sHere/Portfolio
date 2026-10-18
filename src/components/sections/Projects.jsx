@@ -4,6 +4,12 @@ import { portfolio } from "@/data/content";
 import { ArrowDown } from "lucide-react";
 
 const Projects = () => {
+
+    const projectImages = {
+        "twitter-clone": "/images/twitter.png",
+        "servd-ai": "/images/servd.png",
+    }
+
     return (
         <section
             id="project"
@@ -83,18 +89,28 @@ const Projects = () => {
                             </div>
 
                             {/* Right: Project Image */}
-                            <div className={`relative min-w-0 ${index % 2 !== 0 ? "md:order-1" : "md:order-2"
-                                }`}>
-                                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-[#3EE6A8]/20 bg-[#10271F]">
+
+                            <div
+                                className={`relative min-w-0 ${index % 2 !== 0 ? "md:order-1" : "md:order-2"
+                                    }`}
+                            >
+                                <div className="group relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-[#3EE6A8]/20 bg-[#10271F] transition-all duration-500 hover:border-[#3EE6A8]/50 hover:shadow-[0_0_30px_rgba(62,230,168,0.08)]">
                                     <Image
-                                        src={project.image}
+                                        src={projectImages[project.id]}
                                         alt={`${project.title} project preview`}
                                         fill
-                                        sizes="(max-width: 768px) 100vw, 50vw"
-                                        className="object-cover transition duration-500 hover:scale-105"
+                                        sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 550px"
+                                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                                     />
+
+                                    {/* Subtle bottom gradient */}
+                                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#04130E]/30 via-transparent to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-100" />
+
+                                    {/* Mint corner accent */}
+                                    <div className="pointer-events-none absolute bottom-0 left-0 h-px w-0 bg-[#3EE6A8] transition-all duration-500 group-hover:w-full" />
                                 </div>
                             </div>
+
                         </article>
                     ))}
                 </div>

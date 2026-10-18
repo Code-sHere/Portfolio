@@ -1,7 +1,6 @@
 import React from 'react'
 import { portfolio } from '@/data/content'
 import { Dot, ArrowUpRight, ArrowDown } from 'lucide-react';
-
 const Hero = () => {
     return (
         <>

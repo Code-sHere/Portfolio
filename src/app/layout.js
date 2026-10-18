@@ -1,6 +1,7 @@
 import { Bricolage_Grotesque, IBM_Plex_Mono } from "next/font/google";
-import ThemeProvider from "@/components/ThemeProvider";
 import "./globals.css";
+import Script from "next/script";
+import KeyboardCursor from "@/components/KeyboardCursor";
 
 const bricolage = Bricolage_Grotesque({
   variable: "--font-bricolage",
@@ -26,7 +27,22 @@ export const metadata = {
     type: "website",
     images: ["/images/og-image.png"],
   },
+  icons: {
+    icon: "/favicon.png",
+  },
 };
+
+
+const themeScript = `
+(function () {
+  try {
+    var t = localStorage.getItem("theme") || "dark";
+    document.documentElement.classList.toggle("dark", t === "dark");
+  } catch (e) {
+    document.documentElement.classList.add("dark");
+  }
+})();
+`;
 
 export default function RootLayout({ children }) {
   return (
@@ -35,8 +51,15 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
       className={`${bricolage.variable} ${plexMono.variable}`}
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className="min-h-screen bg-base font-display text-fg antialiased">
-        <ThemeProvider>{children}</ThemeProvider>
+        <Script id="theme-init" strategy="beforeInteractive">
+          {themeScript}
+        </Script>
+        <KeyboardCursor />
+        {children}
       </body>
     </html>
   );

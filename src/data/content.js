@@ -142,6 +142,12 @@ export const portfolio = {
         "Next.js",
         "Tailwind CSS",
       ],
+      evidence: [
+        "https://github.com/Code-sHere/Ai-recipe-maker",
+        "https://github.com/Code-sHere/Portfolio",
+        "https://github.com/Code-sHere/Travels",
+        "https://github.com/Code-sHere/Twitter_Clone",
+      ],
     },
     {
       title: "BACKEND",
@@ -150,6 +156,11 @@ export const portfolio = {
         "Express.js",
         "Spring Boot",
         "Laravel",
+      ],
+      evidence: [
+        "https://github.com/Code-sHere/Ai-recipe-maker",
+        "https://github.com/Code-sHere/Twitter_Clone",
+        "https://github.com/Code-sHere/Chat-Sphere",
       ],
     },
     {
@@ -160,6 +171,11 @@ export const portfolio = {
         "Mongoose",
         "MySQL",
       ],
+      evidence: [
+        "https://github.com/Code-sHere/Ai-recipe-maker",
+        "https://github.com/Code-sHere/Twitter_Clone",
+        "https://github.com/Code-sHere/Chat-Sphere",
+      ],
     },
     {
       title: "LANGUAGES",
@@ -167,6 +183,10 @@ export const portfolio = {
         "JavaScript",
         "Java",
         "Python",
+      ],
+      evidence: [
+        "https://github.com/Code-sHere/Ai-recipe-maker",
+        "https://github.com/Code-sHere/Chat-Sphere",
       ],
     },
     {
@@ -189,6 +209,11 @@ export const portfolio = {
         "SMS OTP",
         "WebSockets",
         "REST APIs",
+        "clerk",
+      ],
+      evidence: [
+        "https://github.com/Code-sHere/Ai-recipe-maker",
+        "https://github.com/Code-sHere/Twitter_Clone",
       ],
     },
     {
@@ -202,19 +227,19 @@ export const portfolio = {
 
   architecture: [
     {
-      layer: "Frontend",
+      layer: "INTERFACE",
       technologies: ["React.js", "Next.js"],
     },
     {
-      layer: "Backend",
+      layer: "API",
       technologies: ["Node.js", "Express.js"],
     },
     {
-      layer: "Database",
+      layer: "DATABASE",
       technologies: ["MongoDB", "MySQL"],
     },
     {
-      layer: "Deployment",
+      layer: "DEPLOYMENT",
       technologies: ["Vercel", "Render"],
     },
   ],
@@ -277,38 +302,6 @@ export const portfolio = {
         "Responsive user interface",
       ],
 
-      subscriptionPlans: [
-        {
-          name: "Free",
-          price: "₹0",
-          tweetLimit: "1 tweet per day",
-        },
-        {
-          name: "Bronze",
-          price: "₹100/month",
-          tweetLimit: "3 tweets per day",
-        },
-        {
-          name: "Silver",
-          price: "₹300/month",
-          tweetLimit: "5 tweets per day",
-        },
-        {
-          name: "Gold",
-          price: "₹1000/month",
-          tweetLimit: "Unlimited tweets",
-        },
-      ],
-
-      languages: [
-        "English",
-        "Spanish",
-        "French",
-        "Hindi",
-        "Portuguese",
-        "Chinese",
-      ],
-
       challenges: [
         "Integrating authentication providers and email/SMS OTP workflows.",
         "Managing environment variables and service configurations across local and deployed environments.",
@@ -326,7 +319,8 @@ export const portfolio = {
       ],
 
       liveUrl: "https://twitter-clone-dusky-alpha.vercel.app/",
-      githubUrl: "YOUR_TWITTER_CLONE_REPOSITORY_URL",
+      githubUrl: "https://github.com/Code-sHere/Twitter_Clone",
+
     },
 
     {
@@ -393,7 +387,7 @@ export const portfolio = {
       ],
 
       liveUrl: "https://ai-recipe-maker-servdfrontend.vercel.app/",
-      githubUrl: "YOUR_SERVD_REPOSITORY_URL",
+      githubUrl: "https://github.com/Code-sHere/Ai-recipe-maker",
     },
   ],
 
@@ -463,7 +457,7 @@ export const portfolio = {
       "clear",
     ],
 
-    projectslists:[
+    projectslists: [
       "> projects",
       "1. Twitter Clone",
       "2. SERVD AI",
