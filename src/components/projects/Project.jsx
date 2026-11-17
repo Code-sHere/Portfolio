@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../layout/Navbar'
 import portfolio from '@/data/content'
 import PageFooter from '../footer/PageFooter'
-import{ ArrowLeft, ArrowRight } from 'lucide-react'
+import { ArrowLeft, ArrowRight } from 'lucide-react'
 import WaveDivider from "@/components/ui/WaveDivider";
 import Reveal from "@/components/ui/Reveal";
 
@@ -134,10 +134,12 @@ const Project = () => {
     const projectImages = {
         "twitter-clone": "/images/twitter.png",
         "servd-ai": "/images/servd.png",
+        "documind-ai": "/images/documindai.png",
     }
 
     const twitter = portfolio.projects.find((p) => p.id === 'twitter-clone')
     const servd = portfolio.projects.find((p) => p.id === 'servd-ai')
+    const documind = portfolio.projects.find((p) => p.id === 'documind-ai')
 
     const twitterArchitecture = [
         { layer: 'Client', tech: 'React · Next.js' },
@@ -149,6 +151,12 @@ const Project = () => {
         { layer: 'Frontend', tech: servd.architecture.frontend },
         { layer: 'Auth', tech: servd.architecture.authentication },
         { layer: 'Content', tech: servd.architecture.contentManagement },
+    ]
+
+    const documindArchitecture = [
+        { layer: 'Ingestion', tech: documind.architecture.ingestion },
+        { layer: 'Storage', tech: documind.architecture.storage },
+        { layer: 'Generation', tech: documind.architecture.generation },
     ]
 
     return (
@@ -166,7 +174,7 @@ const Project = () => {
                     {portfolio.projects.map((project, index) => (
                         <div
                             key={project.id}
-                            className="flex flex-col gap-4 rounded-2xl border border-[#1D3A30] bg-[#0F211B] p-5"
+                            className="flex flex-col gap-4 rounded-2xl border border-[#1D3A30] bg-[#0F211B] p-5 md:last:col-span-2"
                         >
                             <img
                                 src={projectImages[project.id]}
@@ -215,7 +223,7 @@ const Project = () => {
             </section>
 
             <WaveDivider from="#04130E" to="#0A1A14" href="#twitter-clone" label="Twitter Clone" />
-            
+
             <CaseStudy
                 id="twitter-clone"
                 number="01"
@@ -236,9 +244,20 @@ const Project = () => {
                 bg="bg-[#04130E]"
             />
 
-            <WaveDivider from="#04130E" to="#0A1A14" href="#twitter-clone" label="End" />
-            <section id="end" className={`${sectionBase} bg-[#0A1A14]`}>
-                <Reveal/>
+            <WaveDivider from="#04130E" to="#0A1A14" href="#documind-ai" label="DocuMind AI" />
+
+            <CaseStudy
+                id="documind-ai"
+                number="03"
+                project={documind}
+                architecture={documindArchitecture}
+                note={`Language: ${documind.architecture.language}`}
+                bg="bg-[#0A1A14]"
+            />
+
+            <WaveDivider from="#0A1A14" to="#04130E" href="#end" label="End" />
+            <section id="end" className={`${sectionBase} bg-[#04130E]`}>
+                <Reveal />
                 <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl lg:text-6xl">
                     Keep exploring. <span className="text-[#3EE6A8]">See you in the repo.</span>
                 </h2>

@@ -1,5 +1,3 @@
-import { head } from "motion/react-client";
-
 export const portfolio = {
   // PERSONAL INFORMATION
   personal: {
@@ -80,15 +78,14 @@ export const portfolio = {
   },
 
   // ABOUT SECTION
-
   about: {
     heading: "A developer who learns by building.",
 
     description:
-      "[I'm Vansh Jaat, a fresher Full Stack also known as a MERN Developer who enjoys turning ideas into real, functional web applications. I work across the frontend and backend, building responsive user interfaces, developing REST APIs, managing databases, and integrating authentication and third-party services.",
+      "I'm Vansh Jaat, a fresher Full Stack also known as a MERN Developer who enjoys turning ideas into real, functional web applications. I work across the frontend and backend, building responsive user interfaces, developing REST APIs, managing databases, and integrating authentication and third-party services.",
 
     secondParagraph:
-      "I've put my skills into practice through projects like my Twitter Clone and SERVD AI. From implementing authentication, subscription plans, payment integration, and multilingual interfaces to building an AI-powered recipe platform, I enjoy exploring how different technologies come together to solve real problems.]",
+      "I've put my skills into practice through projects like my Twitter Clone, SERVD AI, and DocuMind AI. From implementing authentication, subscription plans, payment integration, and multilingual interfaces to building an AI-powered recipe platform and a RAG-based document assistant, I enjoy exploring how different technologies come together to solve real problems.",
 
     workingStyle: [
       {
@@ -127,7 +124,6 @@ export const portfolio = {
         "I'm looking for an opportunity to begin my professional journey as a software developer, contribute to meaningful products, learn from experienced developers, and grow into a stronger full-stack engineer.",
     },
   },
-
 
   // SKILLS
   skills: [
@@ -190,6 +186,19 @@ export const portfolio = {
       ],
     },
     {
+      title: "AI / RAG",
+      items: [
+        "RAG Pipelines",
+        "Embeddings",
+        "Vector Databases",
+        "Text Extraction",
+        // TODO: add the real tools you used in DocuMind AI
+      ],
+      evidence: [
+        "https://github.com/Code-sHere/DocuMind_AI",
+      ],
+    },
+    {
       title: "TOOLS",
       items: [
         "Git",
@@ -244,7 +253,6 @@ export const portfolio = {
     },
   ],
 
-
   // PROJECTS
   projects: [
     {
@@ -259,7 +267,7 @@ export const portfolio = {
       longDescription:
         "Developed a full-stack social media application using React, TypeScript, Next.js, Node.js, Express.js, and MongoDB Atlas. Integrated authentication, social interactions, OTP verification, payment processing, media uploads, and multilingual interfaces.",
 
-      image: "/projects/twitter-clone.png",
+      image: "/images/twitter.png",
 
       technologies: [
         "React.js",
@@ -320,7 +328,6 @@ export const portfolio = {
 
       liveUrl: "https://twitter-clone-dusky-alpha.vercel.app/",
       githubUrl: "https://github.com/Code-sHere/Twitter_Clone",
-
     },
 
     {
@@ -335,7 +342,7 @@ export const portfolio = {
       longDescription:
         "Built a recipe-focused web application using Next.js and React, with Clerk authentication and Strapi CMS integration. The project combines a modern frontend, user authentication, and content management to deliver a structured recipe discovery experience.",
 
-      image: "/projects/servd-ai.png",
+      image: "/images/servd.png",
 
       technologies: [
         "Next.js",
@@ -389,6 +396,71 @@ export const portfolio = {
       liveUrl: "https://ai-recipe-maker-servdfrontend.vercel.app/",
       githubUrl: "https://github.com/Code-sHere/Ai-recipe-maker",
     },
+
+    {
+      id: "documind-ai",
+      title: "DocuMind AI",
+      category: "AI / Full Stack",
+      featured: true,
+
+      description:
+        "A document-based AI assistant that extracts text from documents, stores it as vector embeddings, and uses a RAG pipeline to answer questions grounded in the document's content.",
+
+      longDescription:
+        "Built a Retrieval-Augmented Generation (RAG) application that processes documents, extracts and cleans their text, converts it into embeddings, stores them in a vector database, and retrieves the most relevant context to generate accurate answers. A major focus was verifying that extracted text and generated answers actually matched the source document.",
+
+      image: "/projects/documindai.png",
+
+      technologies: [
+        "RAG",
+        "Embeddings",
+        "Vector Database",
+        // TODO: add your real stack, e.g. "Python", "LangChain", "Qdrant", "Next.js", "Node.js", "OpenAI"
+      ],
+
+      points: [
+        "Built a RAG pipeline that retrieves relevant document context and uses it to generate answers.",
+        "Implemented text extraction from documents and checked the extracted output against the source for correctness.",
+        "Converted document text into embeddings and stored them in a vector database for semantic search.",
+        "Designed the retrieval and answering flow so responses stay grounded in the document instead of guessed.",
+        "Tested outputs repeatedly to find extraction, chunking, and retrieval problems and improve answer quality.",
+      ],
+
+      features: [
+        "Document text extraction",
+        "Text cleaning and chunking",
+        "Embedding generation",
+        "Vector storage and similarity search",
+        "Retrieval-Augmented Generation (RAG)",
+        "Context-grounded answers",
+        "Output verification against source text",
+        // TODO: add real features (chat UI, file types supported, citations, etc.)
+      ],
+
+      architecture: {
+        ingestion: "Text extraction · Chunking", // TODO: exact tools
+        storage: "Embeddings · Vector DB", // TODO: e.g. Qdrant / Pinecone / Chroma
+        generation: "Retrieval · LLM", // TODO: e.g. OpenAI / Gemini / Ollama
+        language: "TODO",
+      },
+
+      challenges: [
+        "Implementing the RAG pipeline end to end, from extraction to retrieval to answer generation.",
+        "Extracting text accurately from documents and verifying the output was actually correct.",
+        "Setting up vector storage and making retrieval return the right chunks.",
+        "Designing the AI flow so answers match the real document content rather than hallucinated text.",
+      ],
+
+      learnings: [
+        "How a RAG pipeline works from ingestion to final answer.",
+        "How text extraction works and how to validate extracted output.",
+        "How embeddings are created and stored in a vector database.",
+        "How to design AI behavior to produce accurate, source-grounded output.",
+      ],
+
+      liveUrl: "TODO_LIVE_URL",
+      githubUrl: "https://github.com/Code-sHere/DocuMind_AI",
+    },
   ],
 
   // CAREER JOURNEY
@@ -404,6 +476,12 @@ export const portfolio = {
       title: "SERVD AI",
       description:
         "Worked on a recipe-focused web application using Next.js, Clerk, and Strapi.",
+    },
+    {
+      status: "Completed",
+      title: "DocuMind AI",
+      description:
+        "Built a RAG-based document assistant with text extraction, embeddings, and vector storage.",
     },
     {
       status: "Completed",
@@ -461,8 +539,9 @@ export const portfolio = {
       "> projects",
       "1. Twitter Clone",
       "2. SERVD AI",
-      "3. Chat-Sphere",
-      "> "
+      "3. DocuMind AI",
+      "4. Chat-Sphere",
+      "> ",
     ],
 
     stackExplorer: [
